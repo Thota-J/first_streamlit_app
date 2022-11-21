@@ -31,7 +31,7 @@ try:
       if not fruit_choice:
            streamlit.error("Please select a fruit to ger information.")
       else: 
-          fruityvice_response = request.ger("https://Fruityvice.com/api/fruit/" +fruit_choice)
+          fruityvice_response = request.ger("https://fruityvice.com/api/fruit/" + fruit_choice)
           fruitvice_normalized = pandas.jason_normalize(fruityvice_response.jason())
           streamlit.dataframe(fruitvice_normalized)
 expect URLError as e:
